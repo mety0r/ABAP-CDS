@@ -1,0 +1,13 @@
+@AbapCatalog.sqlViewName: 'ZV_SOBASIC'
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'CDS Basics'
+
+define view ZCDS_SALES_ORDER_BASIC as select from snwd_so
+{
+   key so_id,
+   buyer_guid,
+   currency_code,
+   gross_amount,
+   net_amount,
+   lifecycle_status 
+}
